@@ -1,0 +1,41 @@
+[debug] [2022-12-11T06:01:24.941Z] ----------------------------------------------------------------------
+[debug] [2022-12-11T06:01:24.947Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Aditya-PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-12-11T06:01:24.949Z] CLI Version:   11.17.0
+[debug] [2022-12-11T06:01:24.949Z] Platform:      win32
+[debug] [2022-12-11T06:01:24.949Z] Node Version:  v16.17.0
+[debug] [2022-12-11T06:01:24.951Z] Time:          Sun Dec 11 2022 11:31:24 GMT+0530 (India Standard Time)
+[debug] [2022-12-11T06:01:24.952Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-11T06:01:25.185Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-11T06:01:25.187Z] > authorizing via signed-in user (sushmavideoac@gmail.com)
+[debug] [2022-12-11T06:01:25.187Z] [iam] checking project zomato-clone-5e743 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-12-11T06:01:25.193Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/zomato-clone-5e743:testIamPermissions [none]
+[debug] [2022-12-11T06:01:25.194Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/zomato-clone-5e743:testIamPermissions x-goog-quota-user=projects/zomato-clone-5e743
+[debug] [2022-12-11T06:01:25.195Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/zomato-clone-5e743:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-11T06:01:26.941Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/zomato-clone-5e743:testIamPermissions 200
+[debug] [2022-12-11T06:01:26.941Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/zomato-clone-5e743:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-11T06:01:26.943Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/zomato-clone-5e743/serviceAccounts/zomato-clone-5e743@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2022-12-11T06:01:26.943Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/zomato-clone-5e743/serviceAccounts/zomato-clone-5e743@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-12-11T06:01:28.954Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/zomato-clone-5e743/serviceAccounts/zomato-clone-5e743@appspot.gserviceaccount.com:testIamPermissions 404
+[debug] [2022-12-11T06:01:28.955Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/zomato-clone-5e743/serviceAccounts/zomato-clone-5e743@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}}
+[debug] [2022-12-11T06:01:28.957Z] [functions] service account IAM check errored, deploy may fail:HTTP Error: 404, Unknown service account {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Unknown service account","status":404}
+[debug] [2022-12-11T06:01:28.959Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/zomato-clone-5e743 [none]
+[debug] [2022-12-11T06:01:29.536Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/zomato-clone-5e743 200
+[debug] [2022-12-11T06:01:29.536Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/zomato-clone-5e743 {"projectId":"zomato-clone-5e743","projectNumber":"803252151936","displayName":"zomato-clone","name":"projects/zomato-clone-5e743","resources":{"hostingSite":"zomato-clone-5e743"},"state":"ACTIVE","etag":"1_4ccc7154-4c3e-46d6-b65b-20b4acb7661e"}
+[info] 
+[info] === Deploying to 'zomato-clone-5e743'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2022-12-11T06:01:29.766Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at new NodeError (node:internal/errors:387:5)
+    at validateString (node:internal/validators:121:11)
+    at Object.join (node:path:429:7)
+    at Config.path (C:\Users\Aditya-PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:123:45)
+    at getChildEnvironment (C:\Users\Aditya-PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\lifecycleHooks.js:52:49)
+    at runTargetCommands (C:\Users\Aditya-PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\lifecycleHooks.js:73:14)
+    at C:\Users\Aditya-PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\lifecycleHooks.js:125:24
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async chain (C:\Users\Aditya-PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:35:9)
+    at async deploy (C:\Users\Aditya-PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:78:5)
+[error] 
+[error] Error: An unexpected error has occurred.
